@@ -3,5 +3,8 @@ header{
     background-color:cornflowerblue;
     margin: 15px;
     color:cornsilk;
+}
 
+th{
+    text-align:center;
 }
