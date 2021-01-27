@@ -27,12 +27,15 @@ input{
 
 .present{
     background-color:red;
+    color:white;
 }
 
 .future{
     background-color: green;
+    color:white;
 }
 
 .past{
     background-color:rgb(114, 114, 114);
+    color:white;
 }

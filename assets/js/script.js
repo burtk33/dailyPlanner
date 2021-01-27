@@ -19,12 +19,15 @@ $(document).ready(function () {
   } else {
     planTextArray = new Array(8);
   }
-  console.log(planTextArray);
 
+//function to render plans dynamically
   function renderSchedule() {
-    console.log(nowHour);
+    
+    //sort through each input
     $("input").each(function (i) {
       let hour = i + 9;
+
+      //set color of background based on time
       if (nowHour === hour) {
         $(this).addClass("present")
       }
@@ -35,12 +38,17 @@ $(document).ready(function () {
         $(this).addClass("past");
       }
 
-      if (planTextArray[i] !== null) {
+      //if index of array is not empty, render text
+      if (planTextArray[i] !== undefined) {
         this.value = planTextArray[i];
+      }
+      else{
+        this.value="";
       }
     });
   }
 
+  //function to save text to local storage
   $("button").on("click", function () {
     let buttonClicked = parseInt(this.value);
     $("input").each(function (i) {
