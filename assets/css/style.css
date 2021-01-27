@@ -24,3 +24,15 @@ input{
 .row{
     margin-bottom: 10px;
 }
+
+.present{
+    background-color:red;
+}
+
+.future{
+    background-color: green;
+}
+
+.past{
+    background-color:rgb(114, 114, 114);
+}

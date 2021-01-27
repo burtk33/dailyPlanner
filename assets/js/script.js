@@ -5,7 +5,7 @@ $(document).ready(function () {
     const now = moment().format('MMMM Do YYYY');
 
     // getting current hour from Moment
-    let nowHour = moment().format('h');
+    let nowHour = parseInt(moment().format('k'));
 
     //setting current date in header
     let dateHeading = $('#current-date');
@@ -20,9 +20,37 @@ $(document).ready(function () {
       planTextArray = new Array(8);
     }
 
+  function renderSchedule(){
+    console.log(nowHour);
     $("input").each(function(i){
-      this.text("testing")
-    });
+      let hour = i+9;
+      if(nowHour === hour){
+        $(this).addClass("present")
+      }
+      else if(nowHour < hour){
+        $(this).addClass("future");
+      }
+      else{
+        $(this).addClass("past");
+      }
 
+      if(planTextArray[i]!==null)
+      {
+        this.value= planTextArray[i];
+      }
+    });
+  }
+
+  $("button").on("click", function(){
+    let buttonClicked = this.value;
+    $("input").each(function(i){
+      if(i===buttonClicked){
+        planTextArray[i]= this.value;
+      }
+    });
+   
+  });
+  
+  renderSchedule();
 
 });
