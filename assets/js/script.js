@@ -5,8 +5,8 @@ $(document).ready(function () {
   const now = moment().format('MMMM Do YYYY');
 
   // getting current hour from Moment
-  //let nowHour = parseInt(moment().format('k'));
-  let nowHour=12;
+  let nowHour = parseInt(moment().format('k'));
+  
   //setting current date in header
   let dateHeading = $('#current-date');
   dateHeading.text(now);
@@ -62,6 +62,7 @@ $(document).ready(function () {
 
   });
 
+  //call function to render the schedule display
   renderSchedule();
 
 });
