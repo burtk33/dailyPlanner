@@ -5,6 +5,22 @@ header{
     color:cornsilk;
 }
 
-th{
-    text-align:center;
+button{
+    margin:15px;
+}
+
+.time{
+    text-align: center;
+    padding:10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:black;
+}
+input{
+    border-style:solid;
+    border-width:1px;
+    border-color:black;
+}
+.row{
+    margin-bottom: 10px;
 }
